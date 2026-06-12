@@ -1,0 +1,32 @@
+/* =====================================================================
+   ComplaintBox — page-transition + FOUC mitigations
+   Linked from every PHP page right after the page-specific stylesheet.
+===================================================================== */
+
+/* 1) Hide Material Symbols glyph text until the font is loaded.
+   Browser shows the literal characters (e.g. "search_off") if the font hasn't
+   downloaded yet — this causes the flashing icon-text on page transitions. */
+.material-symbols-outlined,
+.material-symbols-rounded,
+.material-symbols-sharp {
+  font-family: 'Material Symbols Outlined','Material Symbols Rounded','Material Symbols Sharp', sans-serif;
+  /* When the font hasn't loaded yet, render invisible. */
+  visibility: hidden;
+}
+html.fonts-ready .material-symbols-outlined,
+html.fonts-ready .material-symbols-rounded,
+html.fonts-ready .material-symbols-sharp {
+  visibility: visible;
+}
+
+/* 2) Tiny page-load fade-in to mask the white-flash between navigations. */
+html.cb-page-loading body { opacity: 0; }
+html.cb-page-ready body {
+  opacity: 1;
+  transition: opacity .18s ease-out;
+}
+
+/* 3) Hide any literal text inside an obviously-not-yet-rendered card grid
+   until JS has rendered it. */
+[data-cb-pending] { visibility: hidden; }
+[data-cb-pending].cb-ready { visibility: visible; }
