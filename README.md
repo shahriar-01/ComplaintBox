@@ -1,4 +1,4 @@
-<div align="center">
+ <div align="center">
 
 # 📦 ComplaintBox
 
@@ -422,7 +422,7 @@ All endpoints live under `/api/` and return JSON. Methods use PDO **prepared sta
 |---|---|---|---|
 | 1 | Landing Page | `index.php` | Hero, stats, how it works, testimonials |
 | 2 | Recent Complaints | `recent-complaints.php` | Public, filterable complaint feed |
-| 3 | About | `about.php` | Mission, interactive map, FAQ |
+| 3 | About Page | `about.php` | Mission, interactive map, FAQ |
 | 4 | Contact | `contact.php` | Department directory + feedback form |
 | 5 | Citizen Dashboard | `citizen-dashboard.php` | Submit & track complaints |
 | 6 | Staff Dashboard | `staff-dashboard.php` | Manage department complaints |
