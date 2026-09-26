@@ -2,7 +2,7 @@
 
 # 📦 ComplaintBox
 
-### A Bangladesh-Based Citizen Complaint Management System
+### A Bangladesh Based Citizen Complaint Management System
 
 A full-stack web platform where **citizens** can report city issues — roads, garbage, drainage, water supply, electricity, traffic, environment, and public services — and **government authorities** can track, manage, and resolve them efficiently.
 
